@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('owners', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('account_id')->unique();
-            $table->integer('reputation');
-            $table->bigInteger('user_id');
+            $table->bigInteger('account_id')->nullable();
+            $table->integer('reputation')->nullable();
+            $table->bigInteger('user_id')->nullable();
             $table->string('user_type');
             $table->integer('accept_rate')->nullable();
-            $table->string('profile_image');
-            $table->string('display_name');
-            $table->string('link');
+            $table->string('profile_image')->nullable();
+            $table->string('display_name')->nullable();
+            $table->string('link')->nullable();
             $table->timestamps();
         });
     }

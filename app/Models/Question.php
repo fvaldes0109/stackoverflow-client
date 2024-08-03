@@ -16,6 +16,11 @@ class Question extends Model
         return $this->belongsTo(Owner::class);
     }
 
+    public function inquires()
+    {
+        return $this->belongsToMany(Inquire::class);
+    }
+
     public function tags()
     {
         return $this->belongsToMany(Tag::class);
