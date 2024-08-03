@@ -40,6 +40,12 @@ class QuestionController extends Controller
             'todate' => $request->input('todate'),
         ]);
 
+        if ($response->json()['error_id'] ?? null) {
+            return response()->json([
+                'error' => $response->json(),
+            ], 400);
+        }
+
         $items = $response->json()['items'];
         $question_ids = [];
 
