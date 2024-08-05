@@ -59,6 +59,22 @@ Es recomendable esperar unos segundos antes de ejecutar las migraciones, ya que 
 
 Luego de esto se podrán realizar peticiones al endpoint mencionado anteriormente.
 
+### Ejecución
+
+Luego de haber realizado la instalación, el sistema estará funcionando en la dirección `http://localhost`.
+
+Para detenerlo, se puede ejecutar el siguiente comando:
+
+```bash
+./vendor/bin/sail down
+```
+
+Para volver a levantar el sistema, se puede ejecutar el siguiente comando:
+
+```bash
+./vendor/bin/sail up -d
+```
+
 ### Estructura
 
 La petición es manejada por el controlador `App\Http\Controllers\QuestionController`.
