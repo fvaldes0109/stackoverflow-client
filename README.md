@@ -55,6 +55,8 @@ Solo se necesita tener instalado Docker y Docker Compose en el sistema.
     ./vendor/bin/sail artisan migrate
     ```
 
+Es recomendable esperar unos segundos antes de ejecutar las migraciones, ya que dentro del contenedor de MySQL, la base de datos puede tardar unos segundos en levantarse.
+
 Luego de esto se podrán realizar peticiones al endpoint mencionado anteriormente.
 
 ### Estructura
